@@ -22,7 +22,7 @@ Business applications are what excites me the most about Data Science. Proving t
 ## Summary
 
 ## Acknowledgements
- - (PySpark Window Functions)[https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html]
+ - [PySpark Window Functions](https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html)
  - Udacity DSND Apache Spark Lesson
  - 
 
