@@ -24,7 +24,8 @@ Business applications are what excites me the most about Data Science. Proving t
 ## Acknowledgements
  - [PySpark Window Functions](https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html)
  - Udacity DSND Apache Spark Lesson
- - 
+ - [PySpark Documentation](https://spark.apache.org/docs/latest/api/python/index.html)
+ - [Calculating Differences Between Rows](https://www.arundhaj.com/blog/calculate-difference-with-previous-row-in-pyspark.html)
 
 Reqs:
 Student must have a Github repository of their project. The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgements. If the student submits a web app rather than a blog post, then the Project Definition, Analysis, and Conclusion should be included in the README file, or in their Jupyter Notebook. Students should not use another student's code to complete the project, but they may use other references on the web including StackOverflow and Kaggle to complete the project.
