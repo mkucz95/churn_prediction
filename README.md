@@ -7,8 +7,8 @@
 - Pandas 0.20.3
 
 ## Motivation
-I am always eager to learn new frameworks and expand my capabilities, so when I heard about the possibility of a project utilized Apache Spark and Hadoop I was already very intrigued. Having learned the basics of Apache Spark's PySpark API, there is no better way of displaying machine learning prowess than in a big data context. This project evolves around a key business issue that many firms face; *How can we know which customers want to leave, and how can our marketing department target them?* 
-Business applications are what excites me the most about Data Science. Proving that I can glean valuable insights from corporate-sized data sources would prove to me that i can say **Big Data** as more than just a buzz word.
+I am always eager to learn new frameworks and expand my capabilities, so when I heard about the possibility of a project utilized Apache Spark and Hadoop I was already very intrigued. Having learned the basics of Apache Spark's PySpark API, there is no better way of displaying machine learning prowess than in a big data context. This project revolves around a key business issue that many firms face; *How can we know which customers want to leave, and how can our marketing department target them?* 
+Business applications are what excites me the most about Data Science. Proving that I can glean valuable insights from corporate-sized data sources would prove to me that i can say **Big Data** as more than just a buzzword.
 
 ## Repository
    
@@ -29,6 +29,10 @@ Business applications are what excites me the most about Data Science. Proving t
  - [PySpark ML Package](http://spark.apache.org/docs/2.4.0/api/python/pyspark.ml.html)
  - [Converting rows to Vector type](https://stackoverflow.com/questions/46791302/pyspark-how-do-i-convert-rows-to-vectors)
  - [What is Apache Spark persistence](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-rdd-caching.html)
+ - [PySpark ML vs PySpark MLLib](https://www.quora.com/Why-are-there-two-ML-implementations-in-Spark-ML-and-MLlib-and-what-are-their-different-features)
+ - [ROC vs PR Metrics](https://www.kaggle.com/general/7517)
+ - [Choosing Scalers](https://scikit-learn.org/stable/auto_examples/preprocessing/plot_all_scaling.html)
+ - [Extending Transformer Class](https://stackoverflow.com/questions/32331848/create-a-custom-transformer-in-pyspark-ml)
 
 Reqs:
 Student must have a Github repository of their project. The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgements. If the student submits a web app rather than a blog post, then the Project Definition, Analysis, and Conclusion should be included in the README file, or in their Jupyter Notebook. Students should not use another student's code to complete the project, but they may use other references on the web including StackOverflow and Kaggle to complete the project.
