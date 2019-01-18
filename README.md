@@ -65,4 +65,4 @@ AttributeError: 'StructField' object has no attribute '_get_object_id'
 
 - score of 1.0 for pr_auc, and roc_auc - double check
 - didnt work with multi class metrics even though it did in local jupyter
-
+- aws notebook stopped working`Session '0' is not active`
