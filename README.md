@@ -37,5 +37,32 @@ Business applications are what excites me the most about Data Science. Proving t
 Reqs:
 Student must have a Github repository of their project. The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgements. If the student submits a web app rather than a blog post, then the Project Definition, Analysis, and Conclusion should be included in the README file, or in their Jupyter Notebook. Students should not use another student's code to complete the project, but they may use other references on the web including StackOverflow and Kaggle to complete the project.
 
+# Errors Encountered
+```
+'StructField' object has no attribute '_get_object_id'
+Traceback (most recent call last):
+  File "<stdin>", line 195, in custom_evaluation
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/mllib/evaluation.py", line 204, in __init__
+    StructField("label", DoubleType(), nullable=False)]))
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/sql/context.py", line 307, in createDataFrame
+    return self.sparkSession.createDataFrame(data, schema, samplingRatio, verifySchema)
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1248, in __call__
+    args_command, temp_args = self._build_args(*args)
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1212, in _build_args
+    (new_args, temp_args) = self._get_args(args)
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1199, in _get_args
+    temp_arg = converter.convert(arg, self.gateway_client)
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_collections.py", line 501, in convert
+    java_list.add(element)
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1248, in __call__
+    args_command, temp_args = self._build_args(*args)
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1218, in _build_args
+    [get_command_part(arg, self.pool) for arg in new_args])
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 298, in get_command_part
+    command_part = REFERENCE_TYPE + parameter._get_object_id()
+AttributeError: 'StructField' object has no attribute '_get_object_id'
+```
 
+- score of 1.0 for pr_auc, and roc_auc - double check
+- didnt work with multi class metrics even though it did in local jupyter
 
