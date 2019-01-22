@@ -11,7 +11,7 @@
 I am always eager to learn new frameworks and expand my capabilities, so when I heard about the possibility of a project utilized Apache Spark and Hadoop I was already very intrigued. Having learned the basics of Apache Spark's PySpark API, there is no better way of displaying machine learning prowess than in a big data context. This project revolves around a key business issue that many firms face; *How can we know which customers want to leave, and how can our marketing department target them?* 
 Business applications are what excites me the most about Data Science. Proving that I can glean valuable insights from corporate-sized data sources would prove to me that i can say **Big Data** as more than just a buzzword.
 
-## Repository
+## Repository Organization
    
     .
     ├── 
@@ -22,6 +22,13 @@ Business applications are what excites me the most about Data Science. Proving t
     │  
     └── ...
 ## Summary
+Three models trained performed exceedingly well.
+ 1. Support Vector Machines
+ 2. Random Forest
+ 3. Gradient Boosted Trees
+
+Classifying all items in the testing set correctly 1043 (TN) and 279 (TP).
+I performed PCA analysis and found tht 97.69% of the variance in the dataset can be explained by the first 6 principal components, and therefore keeping only those 6 reduces computation but keeps the performance of the models. Logistic regression performed weakly as it did not classify any churning users correctly (predicted that no users would churn).
 
 ## Acknowledgements
  - [PySpark Window Functions](https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html)
@@ -37,9 +44,9 @@ Business applications are what excites me the most about Data Science. Proving t
  - [Extending Transformer Class](https://stackoverflow.com/questions/32331848/create-a-custom-transformer-in-pyspark-ml)
 
 Reqs:
-Student must have a Github repository of their project. The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgements. If the student submits a web app rather than a blog post, then the Project Definition, Analysis, and Conclusion should be included in the README file, or in their Jupyter Notebook. Students should not use another student's code to complete the project, but they may use other references on the web including StackOverflow and Kaggle to complete the project.
+The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgement
 
-# Errors Encountered
+## Errors Encountered
 ```
 'StructField' object has no attribute '_get_object_id'
 Traceback (most recent call last):
