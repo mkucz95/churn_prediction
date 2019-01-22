@@ -1,5 +1,6 @@
 # Predicting Churn - Apache Spark
 *Predicting Churn from user's activity data*
+[Visit Medium for full write up]()
 
 ## Dependencies
 - Python 3.6.3
@@ -14,9 +15,10 @@ Business applications are what excites me the most about Data Science. Proving t
    
     .
     ├── 
-    │   ├── Sparkify.ipynb            # initial development
-    │   |
-    │   └── market_cap_fill.csv    # CSV file to fill Null market capitalisation data
+    │   ├── Sparkify.ipynb            # initial development on smaller subset
+    │   ├── Sparkify-Viz.ipynb        # visualization of data
+    │   ├── sparkify_full.ipynb       # AWS Implementation
+    │   └── Sparkify.html             # final version of notebook in html
     │  
     └── ...
 ## Summary
