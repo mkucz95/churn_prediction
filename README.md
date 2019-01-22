@@ -63,6 +63,40 @@ Traceback (most recent call last):
 AttributeError: 'StructField' object has no attribute '_get_object_id'
 ```
 
+```
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 57960)
+----------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/SocketServer.py", line 290, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib64/python2.7/SocketServer.py", line 318, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python2.7/SocketServer.py", line 331, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 652, in __init__
+    self.handle()
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/accumulators.py", line 266, in handle
+    poll(authenticate_and_accum_updates)
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/accumulators.py", line 241, in poll
+    if func():
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/accumulators.py", line 254, in authenticate_and_accum_updates
+    received_token = self.rfile.read(len(auth_token))
+TypeError: object of type 'NoneType' has no len()
+```
+
+```
+Exception in thread cell_monitor-10:
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/opt/conda/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/awseditorssparkmonitoringwidget-1.0-py3.6.egg/awseditorssparkmonitoringwidget/cellmonitor.py", line 178, in cell_monitor
+    job_binned_stages[job_id][stage_id] = all_stages[stage_id]
+KeyError: 1148
+```
+
 - score of 1.0 for pr_auc, and roc_auc - double check
 - didnt work with multi class metrics even though it did in local jupyter
 - aws notebook stopped working`Session '0' is not active`
