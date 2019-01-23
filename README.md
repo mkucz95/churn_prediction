@@ -6,29 +6,28 @@
 - Python 3.6.3
 - PySpark 2.3.2
 - Pandas 0.20.3
+> - Matplotlib 3.0.2
+> - seaborn 0.9.0
 
 ## Motivation
 I am always eager to learn new frameworks and expand my capabilities, so when I heard about the possibility of a project utilized Apache Spark and Hadoop I was already very intrigued. Having learned the basics of Apache Spark's PySpark API, there is no better way of displaying machine learning prowess than in a big data context. This project revolves around a key business issue that many firms face; *How can we know which customers want to leave, and how can our marketing department target them?* 
-Business applications are what excites me the most about Data Science. Proving that I can glean valuable insights from corporate-sized data sources would prove to me that i can say **Big Data** as more than just a buzzword.
+Business applications are what excites me the most about Data Science. Proving that I can glean valuable insights from corporate-sized data sources would prove to me that I can say **Big Data** as more than just a buzzword.
 
 ## Repository Organization
    
     .
     ├── 
-    │   ├── Sparkify.ipynb            # initial development on smaller subset
-    │   ├── Sparkify-Viz.ipynb        # visualization of data
-    │   ├── sparkify_full.ipynb       # AWS Implementation
-    │   └── Sparkify.html             # final version of notebook in html
+    │   ├── Sparkify.ipynb            # initial development & EDA on smaller subset of data
+    │   ├── Sparkify-Viz.ipynb        # visualization of datafrom EDA and AWS
+    │   ├── sparkify_full.ipynb       # AWS Implementation and final version
+    │   └── sparkify_full.html        # final version of notebook in html format
     │  
     └── ...
-## Summary
-Three models trained performed exceedingly well.
- 1. Support Vector Machines
- 2. Random Forest
- 3. Gradient Boosted Trees
 
-Classifying all items in the testing set correctly 1043 (TN) and 279 (TP).
-I performed PCA analysis and found tht 97.69% of the variance in the dataset can be explained by the first 6 principal components, and therefore keeping only those 6 reduces computation but keeps the performance of the models. Logistic regression performed weakly as it did not classify any churning users correctly (predicted that no users would churn).
+## Summary
+The final chosen model is a Random Forest classifier which was chosen due to it being the fastest model to train and generate predictions by half being twice as fast as the next fastest model. The classifier that predicted on a dataset of reduced dimensionality still managed exceptional performance. The final dataset was of reduced dimensionality through principal component analysis that explained >97% of the variance in the dataset.
+
+The most interesting part of examining the features of the model is that it actually uses a much simpler version of the random forest classifier than the OOTB version. Instead of creating 32 decision trees that classify each instance, it only creates 10 during training, and lets the trees vote during prediction. The fact that this model did not make mistakes in validation or testing datasets suggests that it is a robust model.
 
 ## Acknowledgements
  - [PySpark Window Functions](https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html)
@@ -46,7 +45,10 @@ I performed PCA analysis and found tht 97.69% of the variance in the dataset can
 Reqs:
 The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgement
 
-## Errors Encountered
+## Errors & Exceptions Encountered
+I encountered various errors when using AWS's EMR managed Hadoop framework that I could only attribute to errors in the backend and not with my code. What complicated manners was that the AWS hosted notebook would crash reasonably frequently.
+
+The errors are listed below for future reference:
 ```
 'StructField' object has no attribute '_get_object_id'
 Traceback (most recent call last):
@@ -105,7 +107,5 @@ Traceback (most recent call last):
     job_binned_stages[job_id][stage_id] = all_stages[stage_id]
 KeyError: 1148
 ```
-
-- score of 1.0 for pr_auc, and roc_auc - double check
-- didnt work with multi class metrics even though it did in local jupyter
-- aws notebook stopped working`Session '0' is not active`
+- `BinaryClassificationEvaluator` always returned metric `areaUnderPR = 1.0` no matter the performance of the classifier
+- aws notebook stopped working `Session '0' is not active`
