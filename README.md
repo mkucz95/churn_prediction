@@ -43,9 +43,6 @@ The most interesting part of examining the features of the model is that it actu
  - [Choosing Scalers](https://scikit-learn.org/stable/auto_examples/preprocessing/plot_all_scaling.html)
  - [Extending Transformer Class](https://stackoverflow.com/questions/32331848/create-a-custom-transformer-in-pyspark-ml)
 
-Reqs:
-The repository must have a README.md file that communicates the libraries used, the motivation for the project, the files in the repository with a small description of each, a summary of the results of the analysis, and necessary acknowledgement
-
 ## Errors & Exceptions Encountered
 I encountered various errors when using AWS's EMR managed Hadoop framework that I could only attribute to errors in the backend and not with my code. What complicated manners was that the AWS hosted notebook would crash reasonably frequently.
 
