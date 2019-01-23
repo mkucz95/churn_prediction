@@ -1,6 +1,7 @@
 # Predicting Churn - Apache Spark
-*Predicting Churn from user's activity data*
-[Visit Medium for full write up]()
+*Predicting Churn from user click-level data with distributed computation*
+
+### [Published Write Up on Medium](https://medium.com/@mati.kucz95/predicting-user-churn-apache-spark-8577d433ff8c)
 
 ## Dependencies
 - Python 3.6.3
